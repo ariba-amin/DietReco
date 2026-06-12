@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+  
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-icon">🍏</span>
+        <span class="brand-text">DietReco</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="ass.html" class="nav-link" >Recommend Diet</a>
+        <a href="my-plan.html"  class="nav-link">My Plans</a>
+        <a href="bmi.html" class="nav-link">BMI</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+      </nav>
+
+     <div class="user-profile">
+   <button class="btn btn-primary btn-lg" id="heroStartBtn" type="button" onclick="window.location.href='ass.html'">
+            Start Assessment
+          </button>
+           <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+</div>
+    </div>
+  </header>
+
+
+ <!-- BMI PAGE -->
+  <section class="bmi-page">
+    <div class="bmi-main-card">
+
+      <div class="bmi-top">
+        <!-- LEFT SIDE -->
+        <div class="bmi-left">
+          <h1>Calculate Your BMI</h1>
+          <p class="bmi-intro">
+            Body Mass Index (BMI) helps you understand whether your weight is in a healthy range for your height.
+            It is a simple way to check your body status.
+          </p>
+
+          <div class="bmi-categories">
+            <h3>BMI Categories</h3>
+
+            <div class="category-row">
+              <span class="range-badge underweight">Below 18.5</span>
+              <span class="category-name">Underweight</span>
+            </div>
+
+            <div class="category-row">
+              <span class="range-badge normal">18.5 – 24.9</span>
+              <span class="category-name">Normal</span>
+            </div>
+
+            <div class="category-row">
+              <span class="range-badge overweight">25 – 29.9</span>
+              <span class="category-name">Overweight</span>
+            </div>
+
+            <div class="category-row">
+              <span class="range-badge obese">30+</span>
+              <span class="category-name">Obese</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="bmi-right">
+          <div class="bmi-right-inner">
+            <div class="bmi-illustration">
+              <img src="assets/bmi.png" alt="BMI Illustration" />
+            </div>
+
+            <h2>BMI Calculator</h2>
+            <p class="calculator-text">
+              Enter your weight and height to calculate your Body Mass Index.
+            </p>
+
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" placeholder="e.g. 70" />
+              </div>
+
+              <div class="input-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" placeholder="e.g. 170" />
+              </div>
+            </div>
+
+            <button class="calculate-btn" id="calculateBtn" type="button">Calculate BMI</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL WIDTH RESULT STRIP -->
+      <div class="result-strip" id="resultBox">
+        <div class="result-strip-inner">
+          <div class="result-main">
+            <p class="result-bmi" id="bmiValue">Your BMI is: --</p>
+            <div class="result-category" id="bmiCategory">Category: --</div>
+          </div>
+          <p class="result-message" id="bmiMessage"></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  
+  <footer class="footer2" id="profile">
+    <div class="container footer2-top">
+
+      <div class="fcol">
+        <div class="footer-brand">
+          <span class="brand-icon">🍏</span>
+          <span class="brand-text">DietReco</span>
+        </div>
+        <p class="footer-desc">
+          A smart diet recommendation system designed to promote
+          healthy eating habits using personalized inputs.
+        </p>
+      </div>
+
+      <div class="fcol">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="ass.html" >Recommend Diet</a>
+        <a href="my-plan.html" >My Plans</a>
+        <a href="bmi.html">BMI</a>
+        <a href="blog.html">Blogs</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Health Info / Support</h4>
+        <a href="#recommend">How It Works</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="blog.html">Nutrition Guide</a>
+        <a href="#faq">FAQs</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Disclaimer & Academic Info</h4>
+        <p class="footer-small-title">Disclaimer:</p>
+        <p class="footer-desc">
+          This system is developed for academic purposes only and does not replace
+          professional medical advice.
+        </p>
+        <p class="footer-desc" style="margin-top:10px;">
+          Final Year Project — BSIT
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer2-bottom">
+      <div class="container footer2-bottom-inner">
+        <p>© 2026 DietReco. All rights reserved.</p>
+        <p>Developed as <b>Final Year Project</b></p>
+      </div>
+    </div>
+  </footer>
+  <script src="components/header-footer.js"></script>
+  <script src="bmi.js"></script>
+ 
+</body>
+</html> 

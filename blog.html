@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DietReco - Blogs</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+  <div class="container nav">
+    
+    <a class="brand" href="#">
+      <span class="brand-icon">🍏</span>
+      <span class="brand-text">DietReco</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="ass.html" class="nav-link" >Recommend Diet</a>
+        <a href="my-plan.html"  class="nav-link">My Plans</a>
+        <a href="bmi.html" class="nav-link">BMI</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+      </nav>
+
+     <div class="user-profile">
+   <button class="btn btn-primary btn-lg" id="heroStartBtn" type="button" onclick="window.location.href='ass.html'">
+            Start Assessment
+          </button>
+           <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+</div>
+
+  </div>
+</header>
+
+  <!-- HERO -->
+  <section class="hero-blog">
+    <div class="container hero-blog-inner">
+      <div class="hero-blog-text">
+        <span class="hero-badge">Healthy Lifestyle</span>
+        <h1>Healthy Diet Blogs</h1>
+        <p>
+          Read useful articles about the benefits of following a diet plan,
+          staying consistent, improving your energy, and building healthy habits.
+        </p>
+
+        <div class="hero-btns">
+          
+        </div>
+      </div>
+
+      <div class="hero-blog-visual">
+        <img
+          src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=80"
+          alt="Healthy food"
+          class="hero-main-img"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED BLOG -->
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Featured Blog</h2>
+        <p>Start with our highlighted article on why a proper diet plan matters.</p>
+      </div>
+
+      <div class="featured-card">
+        <div class="featured-image">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
+            alt="Featured diet blog"
+          />
+        </div>
+
+        <div class="featured-content">
+          <span class="blog-tag">Featured</span>
+          <h3>Top Benefits of Following a Proper Diet Plan</h3>
+          <p>
+            A proper diet plan helps improve your energy, supports better digestion,
+            keeps your routine balanced, and makes healthy eating much easier to follow.
+          </p>
+          <button class="btn btn-blog read-more-btn" data-blog="blog1" type="button">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blogs-grid-section">
+    <div class="container">
+      <div class="section-heading center">
+        <h2>More Blog Posts</h2>
+        <p>Simple and useful articles to keep you motivated on your health journey.</p>
+      </div>
+
+      <div class="blogs-grid">
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=80"
+              alt="Consistency in healthy eating"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Consistency</span>
+            <h3>Why Consistency Matters in Healthy Eating</h3>
+            <p>
+              Following your diet regularly helps you build better habits.
+            </p>
+            <button class="btn btn-blog read-more-btn" data-blog="blog2" type="button">
+              Read More
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=1000&q=80"
+              alt="Balanced diet and energy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Energy</span>
+            <h3>How a Balanced Diet Improves Your Energy</h3>
+            <p>
+              Good food choices can help you stay active, focused, and fresh throughout the day.
+            </p>
+            <button class="btn btn-blog read-more-btn" data-blog="blog3" type="button">
+              Read More
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img
+              src="https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?auto=format&fit=crop&w=1000&q=80"
+              alt="Tips for staying on track"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-tag">Tips</span>
+            <h3>5 Tips for Staying on Track with Your Diet</h3>
+            <p>
+              Small daily steps like hydration, planning meals, and eating on time can help a lot.
+            </p>
+            <button class="btn btn-blog read-more-btn" data-blog="blog4" type="button">
+              Read More
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-heading center">
+        <h2>Why Following a Diet Plan Matters</h2>
+        <p>These are some simple but important benefits of staying consistent.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-box">
+          <div class="benefit-icon">⚡</div>
+          <div>
+            <h3>Better Energy</h3>
+            <p>Balanced meals help you stay active and reduce tiredness during the day.</p>
+          </div>
+        </div>
+
+        <div class="benefit-box">
+          <div class="benefit-icon">⚖️</div>
+          <div>
+            <h3>Weight Management</h3>
+            <p>A proper plan supports healthy weight loss, gain, or maintenance goals.</p>
+          </div>
+        </div>
+
+        <div class="benefit-box">
+          <div class="benefit-icon">🍃</div>
+          <div>
+            <h3>Improved Digestion</h3>
+            <p>Healthy foods and routine eating can improve digestion and gut health.</p>
+          </div>
+        </div>
+
+        <div class="benefit-box">
+          <div class="benefit-icon">🛡️</div>
+          <div>
+            <h3>Better Immunity</h3>
+            <p>Nutrient-rich meals can help support your body and improve overall wellness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-card">
+      <div class="cta-image">
+        <img
+          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+          alt="Healthy eating"
+        />
+      </div>
+      <div class="cta-content">
+        <h2>Ready to Start Your Healthy Journey?</h2>
+        <p>
+          Get your own personalized diet recommendation based on your goals,
+          lifestyle, and health needs.
+        </p>
+        <a href="ass.html" class="btn btn-blog cta-btn">Start Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="blog-modal" id="blogModal">
+    <div class="blog-modal-box">
+      <button class="modal-close" id="closeModal" type="button">&times;</button>
+      <div class="modal-scroll-area">
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+   
+  <footer class="footer2" id="profile">
+    <div class="container footer2-top">
+
+      <div class="fcol">
+        <div class="footer-brand">
+          <span class="brand-icon">🍏</span>
+          <span class="brand-text">DietReco</span>
+        </div>
+        <p class="footer-desc">
+          A smart diet recommendation system designed to promote
+          healthy eating habits using personalized inputs.
+        </p>
+      </div>
+
+        <div class="fcol">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="ass.html" >Recommend Diet</a>
+        <a href="my-plan.html" >My Plans</a>
+        <a href="bmi.html">BMI</a>
+        <a href="blog.html">Blogs</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Health Info / Support</h4>
+        <a href="#recommend">How It Works</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="blog.html">Nutrition Guide</a>
+        <a href="#faq">FAQs</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Disclaimer & Academic Info</h4>
+        <p class="footer-small-title">Disclaimer:</p>
+        <p class="footer-desc">
+          This system is developed for academic purposes only and does not replace
+          professional medical advice.
+        </p>
+        <p class="footer-desc" style="margin-top:10px;">
+          Final Year Project — BSIT
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer2-bottom">
+      <div class="container footer2-bottom-inner">
+        <p>© 2026 DietReco. All rights reserved.</p>
+        <p>Developed as <b>Final Year Project</b></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="blog.js"></script>
+  <script src="components/header-footer.js"></script>
+</body>
+</html>

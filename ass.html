@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Assessment - DietReco</title>
+  <link rel="stylesheet" href="ass.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand-icon">🍏</span>
+        <span class="brand-text">DietReco</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="ass.html" class="nav-link active">Recommend Diet</a>
+        <a href="my-plan.html" class="nav-link">My Plans</a>
+        <a href="bmi.html" class="nav-link">BMI</a>
+        <a href="blog.html" class="nav-link">Blogs</a>
+      </nav>
+
+      <div class="user-profile">
+        <button class="btn btn-primary btn-lg" id="heroStartBtn" type="button" onclick="window.location.href='ass.html'">
+          Start Assessment
+        </button>
+         <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Start Your Diet Assessment</h1>
+          <p class="hero-sub">
+            Answer a few quick questions about your health, disease type and lifestyle so we can recommend a personalized diet plan.
+          </p>
+          <p class="hero-small">4 simple steps • based on your dataset features</p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-illustration">
+            <div class="clipboard">
+              <div class="clipboard-top"></div>
+              <h3>DIET PLAN</h3>
+              <ul>
+                <li><span class="tick"></span><span class="line"></span></li>
+                <li><span class="tick"></span><span class="line"></span></li>
+                <li><span class="tick"></span><span class="line"></span></li>
+              </ul>
+            </div>
+            <div class="food-bowl">
+              <div class="bowl"></div>
+              <div class="fruits fruit-1"></div>
+              <div class="fruits fruit-2"></div>
+              <div class="fruits fruit-3"></div>
+              <div class="fruits bottle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assessment">
+      <div class="assessment-overlay"></div>
+
+      <div class="container">
+        <div class="assessment-card">
+          <h2 class="assessment-title">Diet Recommendation Assessment</h2>
+
+          <form id="assessmentForm" onsubmit="return false;">
+            <div class="steps-nav">
+              <div class="step-item active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-info"><span class="step-label">Basic Info</span></div>
+              </div>
+              <div class="step-separator"></div>
+
+              <div class="step-item" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-info"><span class="step-label">Health Profile</span></div>
+              </div>
+              <div class="step-separator"></div>
+
+              <div class="step-item" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-info"><span class="step-label">Disease &amp; Lifestyle</span></div>
+              </div>
+              <div class="step-separator"></div>
+
+              <div class="step-item" data-step="4">
+                <div class="step-number">4</div>
+                <div class="step-info"><span class="step-label">Review Preferences</span></div>
+              </div>
+            </div>
+
+            <div class="wizard-card-container">
+              <div class="form-card step-card active-step" data-step="1">
+                <div class="form-header">
+                  <span class="step-tag">Step 1:</span>
+                  <span class="step-title">Basic Information</span>
+                </div>
+
+                <div class="form-body">
+                  <div class="form-group">
+                    <label>Age</label>
+                    <div class="age-input">
+                      <button type="button" class="age-btn" data-age-change="-1">-</button>
+                      <input type="number" id="ageInput" name="age" value="18" min="13" max="60">
+                      <button type="button" class="age-btn" data-age-change="1">+</button>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Gender</label>
+                    <div class="pill-group">
+                      <button type="button" class="pill">Male</button>
+                      <button type="button" class="pill active">Female</button>
+                    </div>
+                    <input type="hidden" id="genderHidden" name="gender" value="Female">
+                  </div>
+
+                  <div class="dual-group">
+                    <div class="form-group">
+                      <label>Height (cm)</label>
+                      <input type="number" class="text-input" name="height" id="heightInput" value="165" placeholder="e.g. 165" required />
+                    </div>
+                    <div class="form-group">
+                      <label>Weight (kg)</label>
+                      <input type="number" class="text-input" id="weightInput" name="weight" value="65" placeholder="e.g. 65" required />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Preferred Cuisine</label>
+                    <div class="select-wrapper">
+                      <select id="cuisineSelect" name="preferred_cuisine" class="select-field" required>
+                        <option value="Indian" selected>Indian</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Italian">Italian</option>
+                      </select>
+                      <span class="select-caret">▾</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Goal</label>
+                    <div class="select-wrapper">
+                      <select id="goalSelect" name="goal" class="select-field" required>
+                        <option value="Weight Loss" selected>Weight Loss</option>
+                        <option value="Weight Gain">Weight Gain</option>
+                        <option value="Weight Maintain">Weight Maintain</option>
+                      </select>
+                      <span class="select-caret">▾</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Budget Level</label>
+                    <div class="select-wrapper">
+                      <select id="budgetSelect" name="budget_level" class="select-field" required>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Low">Low</option>
+                        <option value="High">High</option>
+                      </select>
+                      <span class="select-caret">▾</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-footer">
+                  <button class="btn btn-secondary" type="button" data-back disabled>Back</button>
+                  <button class="btn btn-primary" type="button" data-next>Next <span class="arrow">→</span></button>
+                </div>
+              </div>
+
+              <div class="form-card step-card" data-step="2">
+                <div class="form-header">
+                  <span class="step-tag">Step 2:</span>
+                  <span class="step-title">Health Profile</span>
+                </div>
+
+                <div class="form-body">
+                  <div class="form-group">
+                    <label>Physical Activity Level</label>
+                    <div class="activity-options">
+                      <div class="activity-card selected" data-activity="Sedentary">
+                        <img src="assets/1.png" alt="sedentary" class="activity-img">
+                        <div class="activity-text">
+                          <h4>Sedentary</h4>
+                          <p>Little to no exercise</p>
+                        </div>
+                      </div>
+                      <div class="activity-card" data-activity="Moderate">
+                        <img src="assets/2.png" alt="moderate" class="activity-img">
+                        <div class="activity-text">
+                          <h4>Moderate</h4>
+                          <p>Exercise 1–3 days / week</p>
+                        </div>
+                      </div>
+                      <div class="activity-card" data-activity="Active">
+                        <img src="assets/3.png" alt="active" class="activity-img">
+                        <div class="activity-text">
+                          <h4>Active</h4>
+                          <p>Exercise 4–6 days / week</p>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" id="activityHidden" name="physical_activity_level" value="Sedentary">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Weekly Exercise Hours</label>
+                    <div class="select-wrapper">
+                      <select id="exerciseSelect" name="weekly_exercise_hours" class="select-field" required>
+                        <option value="1-3" selected>1–3 hours / week</option>
+                        <option value="0-1">0–1 hours / week</option>
+                        <option value="3-5">3–5 hours / week</option>
+                        <option value="5-7">5–7 hours / week</option>
+                        <option value="7-10">7–10 hours / week</option>
+                      </select>
+                      <span class="select-caret">▾</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Sleep Hours</label>
+                    <input type="number" step="0.5" min="1" max="24" id="sleepInput" name="sleep_hours" class="text-input" value="7" placeholder="e.g. 7.5" required />
+                  </div>
+                </div>
+
+                <div class="form-footer">
+                  <button class="btn btn-secondary" type="button" data-back>Back</button>
+                  <button class="btn btn-primary" type="button" data-next>Next <span class="arrow">→</span></button>
+                </div>
+              </div>
+
+              <div class="form-card step-card" data-step="3">
+                <div class="form-header">
+                  <span class="step-tag">Step 3:</span>
+                  <span class="step-title">Disease &amp; Lifestyle</span>
+                </div>
+
+                <div class="form-body">
+                  <div class="form-group">
+                    <label>Chronic Medical Conditions</label>
+                    <div class="select-wrapper">
+                      <select id="diseaseSelect" name="disease_type" class="select-field">
+                        <option value="None" selected>None / Healthy</option>
+                        <option value="Diabetes">Diabetes</option>
+                        <option value="Hypertension">Hypertension</option>
+                        <option value="Obesity">Obesity</option>
+                      </select>
+                      <span class="select-caret">▾</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group" id="severitySection" style="display: none;">
+                    <label>Condition Severity</label>
+                    <div class="radio-group">
+                      <label><input type="radio" name="severity" value="Mild"> Mild</label>
+                      <label><input type="radio" name="severity" value="Moderate"> Moderate</label>
+                      <label><input type="radio" name="severity" value="Severe"> Severe</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Allergies / Restrictions</label>
+                    <div class="allergy-group">
+                      <label><input type="checkbox" value="None" checked> None</label>
+                      <label><input type="checkbox" value="Nuts"> Nuts</label>
+                      <label><input type="checkbox" value="Dairy"> Dairy (Lactose Intolerant)</label>
+                      <label><input type="checkbox" value="Gluten"> Gluten Free</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-footer">
+                  <button class="btn btn-secondary" type="button" data-back>Back</button>
+                  <button class="btn btn-primary" type="button" data-next>Next <span class="arrow">→</span></button>
+                </div>
+              </div>
+
+              <div class="form-card step-card" data-step="4">
+                <div class="form-header">
+                  <span class="step-tag">Step 4:</span>
+                  <span class="step-title">Review &amp; Generate Plan</span>
+                </div>
+
+                <div class="form-body">
+                  <p style="margin-bottom: 12px; color: var(--muted);">Please review your entries before running recommendations:</p>
+                  <table id="reviewTable" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <tbody>
+                      </tbody>
+                  </table>
+                </div>
+
+                <div class="form-footer">
+                  <button class="btn btn-secondary" type="button" data-back>Back</button>
+                  <button class="btn btn-success" type="button" id="generatePlanBtn">Generate Plan ✨</button>
+                </div>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+ <!-- FOOTER -->
+  <footer class="footer2">
+    <div class="container footer2-top">
+
+      <div class="fcol">
+        <div class="footer-brand">
+          <span class="brand-icon">🍏</span>
+          <span class="brand-text">DietReco</span>
+        </div>
+        <p class="footer-desc">
+          A smart diet recommendation system designed to promote
+          healthy eating habits using personalized inputs.
+        </p>
+      </div>
+
+      <div class="fcol">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="ass.html">Recommend Diet</a>
+        <a href="my-plan.html">My Plans</a>
+        <a href="bmi.html">BMI</a>
+        <a href="blog.html">Blogs</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Health Info / Support</h4>
+        <a href="#recommend">How It Works</a>
+        <a href="bmi.html">BMI Calculator</a>
+        <a href="blog.html">Blogs</a>
+        <a href="#faq">FAQs</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Disclaimer & Academic Info</h4>
+        <p class="footer-small-title">Disclaimer:</p>
+        <p class="footer-desc">
+          This system is developed for academic purposes only and does not replace
+          professional medical advice.
+        </p>
+        <p class="footer-desc" style="margin-top:10px;">
+          Final Year Project — BSIT
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer2-bottom">
+      <div class="container footer2-bottom-inner">
+        <p>© 2026 DietReco. All rights reserved.</p>
+        <p>Developed as <b>Final Year Project</b></p>
+      </div>
+    </div>
+  </footer>
+  <script src="ass.js"></script>
+  <script src="components/header-footer.js"></script>
+</body>
+</html>
